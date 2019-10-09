@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            padding:  50px 10px;;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<input id="in" type="text">
+<input id="add" type="button" value="Add" onclick="add_click()">
+<input id="display" type="button" value="Display " onclick="display_click()">
+<hr style="width: 283px ; position: absolute"/>
+<div id="result" style="margin: 10px"> </div>
+<script>
+    let x=0;
+    let array = Array();
+    let a ="";
+    function add_click() {
+        array[x]=document.getElementById("in").value;
+        alert("Element: " + array[x] + " Added at index " + x);
+        x++;
+        document.getElementById("in").value = "";
+    }
+    function display_click() {
+        for (i = 0; i < x; i++){
+            a += "Element" + i + "=" + array[i] +"<br/>";
+        }
+        document.getElementById("result").innerHTML = a;
+    }
+</script>
+</body>
+</html>
